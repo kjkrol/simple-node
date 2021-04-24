@@ -8,6 +8,8 @@ WORKDIR /usr/src/app
 # package.json and package-lock.json
 COPY package*.json ./
 
+ENV NAME=${NAME_ARG}
+
 # Install dependencies
 RUN npm install
 
